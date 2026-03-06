@@ -1,8 +1,8 @@
 # tfcdash
 
-[![Go Version](https://img.shields.io/github/go-mod/go-version/utkarsh/tfcdash)](https://golang.org/)
+[![Go Version](https://img.shields.io/github/go-mod/go-version/utkarsh867/tfcdash)](https://golang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Release](https://img.shields.io/github/v/release/utkarsh/tfcdash)](https://github.com/utkarsh/tfcdash/releases)
+[![Release](https://img.shields.io/github/v/release/utkarsh867/tfcdash)](https://github.com/utkarsh867/tfcdash/releases)
 
 A terminal user interface (TUI) for managing Terraform Cloud and Terraform Enterprise runs directly from your terminal.
 
