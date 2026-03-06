@@ -22,26 +22,26 @@ Modern TUI experience. Built with [Bubble Tea](https://github.com/charmbracelet/
 
 ## Installation
 
+### Using the installation script
+
+```sh
+curl -sL https://raw.githubusercontent.com/utkarsh867/tfcdash/main/install.sh | sh
+```
+
 ### Pre-built Binaries
 
 Download the latest release for your platform from the [releases page](https://github.com/utkarsh867/tfcdash/releases).
 
-### Homebrew
-
-```bash
-brew install utkarsh/tfcdash/tfcdash
-```
-
 ### Go Install
 
 ```bash
-go install github.com/utkarsh/tfcdash@latest
+go install github.com/utkarsh867/tfcdash@latest
 ```
 
 ### Build from Source
 
 ```bash
-git clone https://github.com/utkarsh/tfcdash.git
+git clone https://github.com/utkarsh867/tfcdash.git
 cd tfcdash
 go build -o tfcdash main.go
 ```
