@@ -9,12 +9,15 @@ builds:
       - CGO_ENABLED=0
     goos:
       - linux
-      - windows
       - darwin
+      - windows
     goarch:
       - amd64
       - arm
       - arm64
+    ignore:
+      - goos: windows
+        goarch: arm
 
 archives:
   - formats: [tar.gz]
@@ -32,8 +35,8 @@ archives:
         formats: [zip]
 
 nfpms:
-  - id: { { .ProjectName } }
-    package_name: { { .ProjectName } }
+  - id: "{{ .ProjectName }}"
+    package_name: "{{ .ProjectName }}"
     file_name_template: "{{ .ConventionalFileName }}"
     vendor: Utkarsh Goel
     homepage: https://utkarshgoel.dev
