@@ -6,8 +6,8 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/hashicorp/go-tfe"
-	"github.com/utkarsh/tfcdash/internal/tfc"
-	"github.com/utkarsh/tfcdash/internal/ui/components"
+	"github.com/utkarsh867/tfcdash/internal/tfc"
+	"github.com/utkarsh867/tfcdash/internal/ui/components"
 )
 
 type Model struct {

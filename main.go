@@ -5,11 +5,11 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/utkarsh/tfcdash/internal/config"
-	"github.com/utkarsh/tfcdash/internal/credentials"
-	"github.com/utkarsh/tfcdash/internal/tfc"
-	"github.com/utkarsh/tfcdash/internal/ui"
-	"github.com/utkarsh/tfcdash/internal/ui/theme"
+	"github.com/utkarsh867/tfcdash/internal/config"
+	"github.com/utkarsh867/tfcdash/internal/credentials"
+	"github.com/utkarsh867/tfcdash/internal/tfc"
+	"github.com/utkarsh867/tfcdash/internal/ui"
+	"github.com/utkarsh867/tfcdash/internal/ui/theme"
 )
 
 func main() {

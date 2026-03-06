@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/go-tfe"
 	"github.com/hashicorp/terraform-json"
 	"github.com/sergi/go-diff/diffmatchpatch"
-	"github.com/utkarsh/tfcdash/internal/tfc"
+	"github.com/utkarsh867/tfcdash/internal/tfc"
 )
 
 type planDetailsMsg struct {

@@ -6,7 +6,7 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 	"github.com/hashicorp/go-tfe"
-	"github.com/utkarsh/tfcdash/internal/ui/theme"
+	"github.com/utkarsh867/tfcdash/internal/ui/theme"
 )
 
 var (

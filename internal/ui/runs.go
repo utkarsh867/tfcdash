@@ -7,8 +7,8 @@ import (
 	"github.com/charmbracelet/bubbles/table"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/hashicorp/go-tfe"
-	"github.com/utkarsh/tfcdash/internal/tfc"
-	"github.com/utkarsh/tfcdash/internal/ui/theme"
+	"github.com/utkarsh867/tfcdash/internal/tfc"
+	"github.com/utkarsh867/tfcdash/internal/ui/theme"
 )
 
 type RunsListModel struct {

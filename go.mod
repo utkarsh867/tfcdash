@@ -1,4 +1,4 @@
-module github.com/utkarsh/tfcdash
+module github.com/utkarsh867/tfcdash
 
 go 1.25.0
 
