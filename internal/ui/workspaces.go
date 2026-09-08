@@ -116,6 +116,8 @@ func (m WorkspaceListModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 	case tea.KeyMsg:
 		switch msg.String() {
+		case "r":
+			return m, m.fetchWorkspaces
 		case "esc", "backspace":
 			return m, func() tea.Msg { return navigateBackMsg{} }
 		case "enter":

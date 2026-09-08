@@ -93,7 +93,10 @@ func (m OrganizationListModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		return m, nil
 
 	case tea.KeyMsg:
-		if msg.String() == "enter" {
+		switch msg.String() {
+		case "r":
+			return m, m.fetchOrganizations
+		case "enter":
 			i := m.orgsTable.SelectedRow()
 			if len(i) > 0 {
 				m.selectedOrg = &tfe.Organization{Name: i[0], Email: i[1]}

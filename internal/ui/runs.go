@@ -125,9 +125,14 @@ func (m RunsListModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		return m, nil
 
 	case tea.KeyMsg:
-		if msg.String() == "esc" || msg.String() == "backspace" {
+		switch msg.String() {
+		case "r":
+			if m.workspace != nil {
+				return m, m.fetchRuns(m.workspace.ID)
+			}
+		case "esc", "backspace":
 			return m, func() tea.Msg { return navigateBackMsg{} }
-		} else if msg.String() == "enter" {
+		case "enter":
 			i := m.runsTable.SelectedRow()
 			if len(i) > 0 {
 				for _, r := range m.runs {

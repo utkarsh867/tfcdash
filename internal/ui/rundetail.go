@@ -145,6 +145,20 @@ func (m RunDetailModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 	case tea.KeyMsg:
 		switch msg.String() {
+		case "r":
+			if m.run != nil {
+				m.loadingPlan = true
+				m.loadingApply = false
+				if m.run.Apply != nil {
+					m.loadingApply = true
+				}
+				var cmds []tea.Cmd
+				cmds = append(cmds, m.fetchPlanDetails)
+				if m.run.Apply != nil {
+					cmds = append(cmds, m.fetchApplyLogs)
+				}
+				return m, tea.Batch(cmds...)
+			}
 		case "esc", "backspace":
 			return m, func() tea.Msg { return navigateBackMsg{} }
 		case "a":
@@ -396,10 +410,12 @@ func (m RunDetailModel) renderApplySection() []string {
 }
 
 func (m RunDetailModel) renderFooter() string {
+	helpText := "Press 'r' to refresh"
 	if m.run.Status == tfe.RunPlanned || m.run.Status == tfe.RunPlannedAndFinished {
-		return runDetailHelpStyle.Render("Press 'a' to Apply  •  'esc' to go back")
+		helpText += "  •  Press 'a' to Apply"
 	}
-	return runDetailHelpStyle.Render("Press 'esc' to go back")
+	helpText += "  •  'esc' to go back"
+	return runDetailHelpStyle.Render(helpText)
 }
 
 func (m RunDetailModel) View() string {
